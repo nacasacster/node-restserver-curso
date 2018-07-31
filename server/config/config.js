@@ -18,7 +18,7 @@ let ulrDB
 if (process.env.NODE_ENV === 'dev') {
     ulrDB = 'mongodb://localhost:27017/cafe';
 } else {
-    ulrDB = 'mongodb://cafe_database:OtraCont1023@ds133621.mlab.com:33621/cafe_database'
+    ulrDB = process.env.MONGO_URI;
 }
 
 process.env.ulrDB = ulrDB;
